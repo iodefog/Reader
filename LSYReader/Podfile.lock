@@ -1,0 +1,16 @@
+PODS:
+  - iflyMSC (1.144)
+
+DEPENDENCIES:
+  - iflyMSC
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - iflyMSC
+
+SPEC CHECKSUMS:
+  iflyMSC: 7631cefeb1493b4bf0812a2a9b4fcdc6fe9f782e
+
+PODFILE CHECKSUM: ce762ab6df0f035e08d059c0515c4e493249df43
+
+COCOAPODS: 1.5.3

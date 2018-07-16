@@ -36,6 +36,30 @@
 
 @implementation LSYReadPageViewController
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if (_readView.content.length > 0) {
+        id delegate = UIApplication.sharedApplication.delegate;
+        if ([delegate respondsToSelector:@selector(saySpeaker:)]) {
+            [delegate performSelector:@selector(saySpeaker:) withObject:_readView.content];
+        }
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    id delegate = UIApplication.sharedApplication.delegate;
+    if ([delegate respondsToSelector:@selector(stopSpeaker)]) {
+        [delegate performSelector:@selector(stopSpeaker)];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addChildViewController:self.pageViewController];
@@ -54,6 +78,8 @@
     [self.catalogView addSubview:self.catalogVC.view];
     //添加笔记
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNotes:) name:LSYNoteNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iflyComplete:) name:@"IFLYMSCSpeakerComplete" object:nil];
 
 }
 
@@ -63,6 +89,43 @@
     model.recordModel = [_model.record copy];
     [[_model mutableArrayValueForKey:@"notes"] addObject:model];    //这样写才能KVO数组变化
     [LSYReadUtilites showAlertTitle:nil content:@"保存笔记成功"];
+}
+
+- (void)iflyComplete:(NSNotification *)no{
+//    [self pageViewController:nil viewControllerBeforeViewController:nil];
+//    [self pageViewController:nil viewControllerAfterViewController:nil]
+//    _pageChange = _page;
+//    _chapterChange = _chapter;
+//
+//    if (_chapterChange==0 &&_pageChange == 0) {
+//        return ;
+//    }
+//    if (_pageChange==0) {
+//        _chapterChange--;
+//        _pageChange = _model.chapters[_chapterChange].pageCount-1;
+//    }
+//    else{
+//        _pageChange--;
+//    }
+//
+//    if (_model.type == ReaderEpub) {
+//        _readView.type = ReaderEpub;
+//        if (!_model.chapters[_pageChange].epubframeRef) {
+//            NSString *path = [kDocuments stringByAppendingPathComponent:_model.chapters[_chapter].chapterpath];
+//            NSString* html = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:path]] encoding:NSUTF8StringEncoding];
+//            _model.chapters[_chapter].content = [html stringByConvertingHTMLToPlainText];
+//            [_model.chapters[_chapter] parserEpubToDictionary];
+//            [_model.chapters[_chapter] paginateEpubWithBounds:CGRectMake(0,0, [UIScreen mainScreen].bounds.size.width-LeftSpacing-RightSpacing, [UIScreen mainScreen].bounds.size.height-TopSpacing-BottomSpacing)];
+//        }
+//
+//        _readView.epubFrameRef = _model.chapters[_chapter].epubframeRef[page];
+//        _readView.imageArray = _model.chapters[_chapter].imageArray;
+//        _readView.content = _model.chapters[_chapter].content;
+//    }
+//    else{
+//        _readView.type = ReaderTxt;
+//        _readView.content = [_model.chapters[_chapter] stringOfPage:page];
+//    }
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -345,6 +408,11 @@
     }
     return [self readViewWithChapter:_chapterChange page:_pageChange];
 }
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController{
+    return 0;
+}
+
 #pragma mark -PageViewController Delegate
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
@@ -356,6 +424,16 @@
     }
     else{
         [self updateReadModelWithChapter:_chapter page:_page];
+        if (_readView.content.length > 0) {
+          id delegate = UIApplication.sharedApplication.delegate;
+            if ([delegate respondsToSelector:@selector(saySpeaker:)]) {
+                [delegate performSelector:@selector(saySpeaker:) withObject:_readView.content];
+            }
+        }
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self iflyComplete:nil];
+        });
     }
 }
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers

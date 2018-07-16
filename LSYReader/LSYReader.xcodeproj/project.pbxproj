@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B23B3B8772E8ABA4F37A96 /* libPods-LSYReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BECD94A8A5E1D1195860484 /* libPods-LSYReader.a */; };
 		871E61041D1252B20047AAFE /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 871E60E71D1252B20047AAFE /* CXMLDocument_CreationExtensions.m */; };
 		871E61051D1252B20047AAFE /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 871E60E91D1252B20047AAFE /* CXMLNode_CreationExtensions.m */; };
 		871E61061D1252B20047AAFE /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 871E60EB1D1252B20047AAFE /* CXHTMLDocument.m */; };
@@ -67,9 +68,16 @@
 		ABE8ABE21CFED88300693078 /* bg_back_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE8ABE01CFED88300693078 /* bg_back_white@2x.png */; };
 		ABE8ABE41CFED8CE00693078 /* reader_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE8ABE31CFED8CE00693078 /* reader_more@2x.png */; };
 		ABE8ABE71D02A99300693078 /* r_drag-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE8ABE61D02A99300693078 /* r_drag-dot@2x.png */; };
+		C7A688DF20FC915E00BEC2CA /* AppDelegate+IFly.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A688DE20FC915E00BEC2CA /* AppDelegate+IFly.m */; };
+		C7A688F520FC936000BEC2CA /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A688F220FC936000BEC2CA /* TTSConfig.m */; };
+		C7A688F620FC936000BEC2CA /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A688F320FC936000BEC2CA /* PcmPlayer.m */; };
+		C7A688F720FC936000BEC2CA /* IflyMSCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A688F420FC936000BEC2CA /* IflyMSCManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0757A39AF2E3D664BF4D733E /* Pods-LSYReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSYReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSYReader/Pods-LSYReader.debug.xcconfig"; sourceTree = "<group>"; };
+		6F603D2CB6ADA168B6E1BCE7 /* Pods-LSYReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSYReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSYReader/Pods-LSYReader.release.xcconfig"; sourceTree = "<group>"; };
+		7BECD94A8A5E1D1195860484 /* libPods-LSYReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSYReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		871E60E61D1252B20047AAFE /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
 		871E60E71D1252B20047AAFE /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
 		871E60E81D1252B20047AAFE /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
@@ -180,6 +188,15 @@
 		ABE8ABE01CFED88300693078 /* bg_back_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_back_white@2x.png"; sourceTree = "<group>"; };
 		ABE8ABE31CFED8CE00693078 /* reader_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reader_more@2x.png"; sourceTree = "<group>"; };
 		ABE8ABE61D02A99300693078 /* r_drag-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "r_drag-dot@2x.png"; sourceTree = "<group>"; };
+		C7A688DD20FC915E00BEC2CA /* AppDelegate+IFly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+IFly.h"; sourceTree = "<group>"; };
+		C7A688DE20FC915E00BEC2CA /* AppDelegate+IFly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+IFly.m"; sourceTree = "<group>"; };
+		C7A688EE20FC936000BEC2CA /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
+		C7A688EF20FC936000BEC2CA /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
+		C7A688F020FC936000BEC2CA /* IflyMSCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IflyMSCManager.h; sourceTree = "<group>"; };
+		C7A688F120FC936000BEC2CA /* PcmPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayerDelegate.h; sourceTree = "<group>"; };
+		C7A688F220FC936000BEC2CA /* TTSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSConfig.m; sourceTree = "<group>"; };
+		C7A688F320FC936000BEC2CA /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
+		C7A688F420FC936000BEC2CA /* IflyMSCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IflyMSCManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,12 +205,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				871E617A1D127D880047AAFE /* libz.tbd in Frameworks */,
+				38B23B3B8772E8ABA4F37A96 /* libPods-LSYReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811D9C2C1F6D9C06765FA58E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0757A39AF2E3D664BF4D733E /* Pods-LSYReader.debug.xcconfig */,
+				6F603D2CB6ADA168B6E1BCE7 /* Pods-LSYReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		871E60E31D1252B20047AAFE /* TouchXML */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +343,8 @@
 			children = (
 				AB9A96B91CFC2EE80066030C /* LSYReader */,
 				AB9A96B81CFC2EE70066030C /* Products */,
+				811D9C2C1F6D9C06765FA58E /* Pods */,
+				B8E5DF52D9C833C8280F32E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,9 +359,12 @@
 		AB9A96B91CFC2EE80066030C /* LSYReader */ = {
 			isa = PBXGroup;
 			children = (
+				C7A688ED20FC936000BEC2CA /* IflyMSCManager */,
 				AB9A96D11CFC2F1F0066030C /* Reader */,
 				AB9A96BD1CFC2EE80066030C /* AppDelegate.h */,
 				AB9A96BE1CFC2EE80066030C /* AppDelegate.m */,
+				C7A688DD20FC915E00BEC2CA /* AppDelegate+IFly.h */,
+				C7A688DE20FC915E00BEC2CA /* AppDelegate+IFly.m */,
 				AB9A96C01CFC2EE80066030C /* ViewController.h */,
 				AB9A96C11CFC2EE80066030C /* ViewController.m */,
 				AB9A96E21CFC3AC60066030C /* LSYReader-Prefix.pch */,
@@ -438,6 +470,28 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B8E5DF52D9C833C8280F32E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BECD94A8A5E1D1195860484 /* libPods-LSYReader.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7A688ED20FC936000BEC2CA /* IflyMSCManager */ = {
+			isa = PBXGroup;
+			children = (
+				C7A688EE20FC936000BEC2CA /* PcmPlayer.h */,
+				C7A688F320FC936000BEC2CA /* PcmPlayer.m */,
+				C7A688F020FC936000BEC2CA /* IflyMSCManager.h */,
+				C7A688F420FC936000BEC2CA /* IflyMSCManager.m */,
+				C7A688EF20FC936000BEC2CA /* TTSConfig.h */,
+				C7A688F220FC936000BEC2CA /* TTSConfig.m */,
+				C7A688F120FC936000BEC2CA /* PcmPlayerDelegate.h */,
+			);
+			path = IflyMSCManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +499,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB9A96CE1CFC2EE80066030C /* Build configuration list for PBXNativeTarget "LSYReader" */;
 			buildPhases = (
+				FBB3D3E8DDC008DE3483DAEC /* [CP] Check Pods Manifest.lock */,
 				AB9A96B31CFC2EE70066030C /* Sources */,
 				AB9A96B41CFC2EE70066030C /* Frameworks */,
 				AB9A96B51CFC2EE70066030C /* Resources */,
@@ -515,6 +570,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FBB3D3E8DDC008DE3483DAEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LSYReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB9A96B31CFC2EE70066030C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -523,6 +599,7 @@
 				87D8BD2B1CFFE5100087D8DA /* LSYViewPagerVC.m in Sources */,
 				871E610A1D1252B20047AAFE /* CXMLElement_CreationExtensions.m in Sources */,
 				871E61D61D12A66A0047AAFE /* GTMNSString+HTML.m in Sources */,
+				C7A688F620FC936000BEC2CA /* PcmPlayer.m in Sources */,
 				AB9A96C21CFC2EE80066030C /* ViewController.m in Sources */,
 				AB9A96F41CFD27FC0066030C /* LSYChapterModel.m in Sources */,
 				87D8BD311CFFE68E0087D8DA /* LSYReadView.m in Sources */,
@@ -547,6 +624,7 @@
 				871E61081D1252B20047AAFE /* CXMLDocument_PrivateExtensions.m in Sources */,
 				87D8BD411D002C4E0087D8DA /* UIImage+ImageEffects.m in Sources */,
 				871E61041D1252B20047AAFE /* CXMLDocument_CreationExtensions.m in Sources */,
+				C7A688F520FC936000BEC2CA /* TTSConfig.m in Sources */,
 				AB9A96F71CFD2EC70066030C /* LSYRecordModel.m in Sources */,
 				871E610D1D1252B20047AAFE /* CXMLNode.m in Sources */,
 				871E61051D1252B20047AAFE /* CXMLNode_CreationExtensions.m in Sources */,
@@ -554,8 +632,10 @@
 				871E61061D1252B20047AAFE /* CXHTMLDocument.m in Sources */,
 				871E61101D1252B20047AAFE /* CXMLUnsupportedNode.m in Sources */,
 				871E61071D1252B20047AAFE /* CXMLDocument.m in Sources */,
+				C7A688DF20FC915E00BEC2CA /* AppDelegate+IFly.m in Sources */,
 				AB9A96EB1CFD27C70066030C /* LSYReadModel.m in Sources */,
 				AB905C751D0D1BC400F3B2C9 /* LSYMagnifierView.m in Sources */,
+				C7A688F720FC936000BEC2CA /* IflyMSCManager.m in Sources */,
 				AB9A96E71CFD25190066030C /* LSYReadUtilites.m in Sources */,
 				871E61CB1D1282B80047AAFE /* mztools.c in Sources */,
 				871E610E1D1252B20047AAFE /* CXMLNode_PrivateExtensions.m in Sources */,
@@ -676,16 +756,24 @@
 		};
 		AB9A96CF1CFC2EE80066030C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0757A39AF2E3D664BF4D733E /* Pods-LSYReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = P348GLNLW8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LSYReader",
+				);
 				GCC_PREFIX_HEADER = "LSYReader/LSYReader-Prefix.pch";
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = LSYReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-lxml2";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.renrui.LSYReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -693,16 +781,24 @@
 		};
 		AB9A96D01CFC2EE80066030C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F603D2CB6ADA168B6E1BCE7 /* Pods-LSYReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = P348GLNLW8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LSYReader",
+				);
 				GCC_PREFIX_HEADER = "LSYReader/LSYReader-Prefix.pch";
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = LSYReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-lxml2";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.renrui.LSYReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
